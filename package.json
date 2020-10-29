@@ -1,0 +1,46 @@
+{
+  "name": "roll-initiative",
+  "version": "1.0.0",
+  "description": "A web app for tracking battles in D&D 5th edition.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackwkinsey/roll-initiative.git"
+  },
+  "keywords": [
+    "D&D",
+    "5th",
+    "edition",
+    "battle",
+    "tracker"
+  ],
+  "author": "Jack Kinsey <jack.w.kinsey@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jackwkinsey/roll-initiative/issues"
+  },
+  "homepage": "https://github.com/jackwkinsey/roll-initiative#readme",
+  "dependencies": {
+    "next": "^10.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "prettier": "^2.1.2"
+  }
+}
