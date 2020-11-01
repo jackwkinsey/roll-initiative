@@ -21,6 +21,8 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
+    camelcase: 0,
+    'no-underscore-dangle': 0,
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/forbid-prop-types': [0, { forbid: ['any'] }],
