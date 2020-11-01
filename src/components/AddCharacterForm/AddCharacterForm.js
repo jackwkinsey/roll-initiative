@@ -15,9 +15,10 @@ class AddCharacterForm extends Component {
   }
 
   handleSubmit(event) {
-    // eslint-disable-next-line no-alert
-    alert(`Entered character data: ${JSON.stringify(this.state)}`);
     event.preventDefault();
+
+    const { addCharacter } = this.props;
+    addCharacter(this.state);
   }
 
   render() {
