@@ -8,7 +8,7 @@ const rick_grimes = { name: 'Rick Grimes', initiative: 5 };
 
 describe('BattleQueue data structure', () => {
   describe('methods', () => {
-    describe('add(character)', () => {
+    describe('addByInitiative(character)', () => {
       test('adds character into correct position', () => {
         // Arrange
         const testCharacters = [clancy, darth_maul];
@@ -22,9 +22,9 @@ describe('BattleQueue data structure', () => {
         ];
 
         // Act
-        testBattleQueue.add(dark_helmet);
-        testBattleQueue.add(jean_luc_picard);
-        testBattleQueue.add(rick_grimes);
+        testBattleQueue.addByInitiative(dark_helmet);
+        testBattleQueue.addByInitiative(jean_luc_picard);
+        testBattleQueue.addByInitiative(rick_grimes);
 
         // Assert
         expect(testBattleQueue.elements).toEqual(expected);
