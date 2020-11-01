@@ -1,23 +1,27 @@
 import { Component } from 'react';
 import AddCharacterForm from '../components/AddCharacterForm';
 import CombatList from '../components/CombatList';
+import BattleQueue from '../structures/BattleQueue';
 
-class HomePage extends Component {
+class BattleSetupPage extends Component {
   constructor(props) {
     super(props);
+    this.battleQueue = new BattleQueue();
 
-    this.state = { characters: [] };
+    this.state = { characters: this.battleQueue.elements };
 
     this.addCharacter = this.addCharacter.bind(this);
+    this.endCharacterTurn = this.endCharacterTurn.bind(this);
   }
 
   addCharacter(character) {
-    const { characters: stateCharacters } = this.state;
-    let characters = JSON.parse(JSON.stringify(stateCharacters));
-    characters.push(character);
-    characters = characters.sort((a, b) => b.initiative - a.initiative);
+    this.battleQueue.addByInitiative(character);
+    this.setState({ characters: this.battleQueue.elements });
+  }
 
-    this.setState({ characters });
+  endCharacterTurn() {
+    this.battleQueue.moveFirstToBack();
+    this.setState({ characters: this.battleQueue.elements });
   }
 
   render() {
@@ -25,10 +29,10 @@ class HomePage extends Component {
     return (
       <>
         <AddCharacterForm addCharacter={this.addCharacter} />
-        <CombatList characters={characters} />
+        <CombatList characters={characters} endTurn={this.endCharacterTurn} />
       </>
     );
   }
 }
 
-export default HomePage;
+export default BattleSetupPage;
