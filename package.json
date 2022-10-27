@@ -26,6 +26,7 @@
   "bugs": {
     "url": "https://github.com/jackwkinsey/roll-initiative/issues"
   },
+  "engines": { "node": "16.x" },
   "homepage": "https://github.com/jackwkinsey/roll-initiative#readme",
   "dependencies": {
     "next": "^13.0.0",
